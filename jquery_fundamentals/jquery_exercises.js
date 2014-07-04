@@ -1,19 +1,25 @@
 // SOLUTIONS GO BELOW EACH EXERCISE
-
+$(document).ready( function() {
 // EXERCISE: Change Background
 
 // Change the background color of '#target' by script. 
 // Hint: you can use .css
+
+$('#target').css('background-color', 'blue');
 
 // EXERCISE: Change Parent
 
 // Change the text in the span, a child of "#target"
 // Hint: you can use .text
 
+$('#target').text('This is some text');
+
 // EXERCISE: Create Clone
 
 // Create a clone of the span in "#target" and position it under the origin.
 // Hint: you can use .clone and .insertAfter
+
+$('#target').clone().inserAfter('#target')
 
 // EXERCISE: Use Filter
 
@@ -79,5 +85,4 @@
 
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
-
-
+});
