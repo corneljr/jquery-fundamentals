@@ -96,15 +96,25 @@ $(document).ready( function() {
 // Make the list-box alternating. (Make odd options a different color)
 // Hint: you can select the option and use .filter and .css
 
-	
+	// $('option').filter(':odd').css('background-color', 'red')
 
 // EXERCISE: All But One
 
 // Remove all children of "#target" but h2
 // Hint: you can use .children, .not and .remove
 
+	// var save = $('#target h2').detach();
+	// $('#target').empty().append(save);
+
 // EXERCISE: Without Children
 
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
+
+function check(index, element) {
+	element.children().length > 0;
+};
+
+$('div').not(check(index,element)).remove();
+
 });
