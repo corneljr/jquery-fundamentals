@@ -17,6 +17,25 @@
 // Insert a new link element into the page.
 // Event Linker
 
+if (document.title.indexOf('Movies') > -1) {
+    getMovieTitles();
+};
+    
+    
+function getMovieTitles() {   
+   	var movies = [];
+    var titles = document.getElementsByClassName('lrg bold');
+    for (i = 0; i < titles.length; i++) {
+        var title = titles[i].innerHTML;
+        var url = encodeURIComponent(title);
+        var a = document.createElement('a');
+        a.href = 'http://www.imdb.com/find?q=' + url;
+        a.innerHTML = 'IMDB Results';
+        titles[i].parentNode.appendChild(a);
+    }
+    return movies;
+};
+
 // In this exercise, you’ll make a script to link dates on a website to Google Calendar create-an-event links, so that you can easily add an event from a website to your calendar.
 
 // Go to a page on SF Fun Cheap with a daily listing, like this one (http://sf.funcheap.com/2012/06/09/).
